@@ -21,14 +21,14 @@ export default class Validator {
   }
 
   showInfo(cardValidity) {
-    this.validityElement.innerText = 'validity: ';
+    this.validityElement.innerText = 'Validity: ';
     const validityInfo = document.createElement('span');
     if (cardValidity.validity) {
       validityInfo.classList.add('valid');
       validityInfo.innerText = 'OK';
       this.validityElement.appendChild(validityInfo);
 
-      this.paymentElement.innerText = 'pay system: ';
+      this.paymentElement.innerText = 'Pay System: ';
       const paySystemInfo = document.createElement('span');
       paySystemInfo.innerText = cardValidity.paySystem ? cardValidity.paySystem.name : 'unknown';
       this.paymentElement.appendChild(paySystemInfo);
